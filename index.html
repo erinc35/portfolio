@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+  <!-- <link href="//netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css" rel="stylesheet"> -->
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+  <script src="https://use.fontawesome.com/d90fe06ba2.js"></script>
+  <link rel="stylesheet" type="text/css" href="app.css">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.css">
+  <title>Erinç Emer</title>
+</head>
+<body >
+  <script>
+  // Input Lock
+  $('textarea').blur(function () {
+    $('#hire textarea').each(function () {
+      $this = $(this);
+      if ( this.value != '' ) {
+        $this.addClass('focused');
+        $('textarea + label + span').css({'opacity': 1});
+      }
+      else {
+        $this.removeClass('focused');
+        $('textarea + label + span').css({'opacity': 0});
+      }
+    });
+  });
+
+  $('#hire .field:first-child input').blur(function () {
+    $('#hire .field:first-child input').each(function () {
+      $this = $(this);
+      if ( this.value != '' ) {
+        $this.addClass('focused');
+        $('.field:first-child input + label + span').css({'opacity': 1});
+      }
+      else {
+        $this.removeClass('focused');
+        $('.field:first-child input + label + span').css({'opacity': 0});
+      }
+    });
+  });
+
+  $('#hire .field:nth-child(2) input').blur(function () {
+    $('#hire .field:nth-child(2) input').each(function () {
+      $this = $(this);
+      if ( this.value != '' ) {
+        $this.addClass('focused');
+        $('.field:nth-child(2) input + label + span').css({'opacity': 1});
+      }
+      else {
+        $this.removeClass('focused');
+        $('.field:nth-child(2) input + label + span').css({'opacity': 0});
+      }
+    });
+  });
+</script>
+<nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Home</a></li>
+      <li><a class="deneme" href="#">Page 1</a></li>
+      <li><a href="#">Page 2</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </div>
+</nav>
+
+
+<nav class="social">
+  <ul>
+    <li><a href="#">Twitter <i class="fa fa-twitter"></i></a></li>
+    <li><a href="#">Facebook <i class="fa fa-facebook"></i></a></li>
+    <li><a href="#">Github <i class="fa fa-github"></i></a></li>
+    <li><a href="#">Linkedin <i class="fa fa-linkedin"></i></a></li>
+    <li><a href="#">Instagram <i class="fa fa-instagram"></i></a></li>
+
+  </ul>
+</nav>
+<div class="parallax"></div>
+<div class="who">
+
+  <h2 class="home-h1">Who am I?</h2>
+  <h3 class="obj">I am a quick learner, a hard worker, and possessed of emotional intelligence. I have strong english skills, constantly expanding technical facility, and a long-standing relationship with aesthetics and acoustics.blablablablablabla</h3>
+
+</div>
+<div class="parallax"></div>
+<div class="contact" id="contact">
+  <section id="hire">
+    <p class="section-h1">LET'S COMMUNICATE!</p>
+
+    <form action="mailto:erincemer@gmail.com" method="post" enctype="text/plain">
+      <div class="field name-box">
+        <input type="text" id="name" placeholder="Who Are You?"/>
+        <label for="name">Name</label>
+        <span class="ss-icon">check</span>
+      </div>
+
+      <div class="field email-box">
+        <input type="text" id="email" placeholder="name@email.com"/>
+        <label for="email">Email</label>
+        <span class="ss-icon">check</span>
+      </div>
+
+      <div class="field msg-box">
+        <textarea id="msg" rows="4" placeholder="Your message goes here..."/></textarea>
+        <label for="msg">Message</label>
+        <span class="ss-icon">check</span>
+      </div>
+
+      <input class="button" type="submit" value="Send" />
+    </form>
+  </section>
+</div>
+<div class="parallax"></div>
+
+
+</body>
+</html>
+
+
+
